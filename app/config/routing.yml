@@ -1,0 +1,5 @@
+auctores_blog:
+    resource: "@AuctoresBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

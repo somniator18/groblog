@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Decade Blog{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <header>
+            {% include ':Base:navbar.html.twig' %}
+        </header>
+        <main>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        </main>
+    <footer>
+        {% include ':Base:footer.html.twig' %}
+    </footer>
+    </body>
+</html>
