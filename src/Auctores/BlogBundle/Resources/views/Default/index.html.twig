@@ -2,4 +2,18 @@
 {% extends "::base.html.twig" %}
 
 {% block title %} Page d'accueil {% endblock %}
-{% block body %} Yolo l'asticot {% endblock %}
+{% block body %}
+    <h3 style="font-family:vivaldi;margin:0px;">Les derniers articles</h3>
+    <div class="row container brown lighten-1">
+
+
+
+{% for article in listArticle %}
+    <div class="col s12 container ">
+    {% include 'AuctoresBlogBundle:Default:bloc.html.twig' with {'article': article}%}
+    </div>
+{% endfor %}
+        {% include 'AuctoresBlogBundle:Default:pagination.html.twig' %}
+    </div>
+
+{% endblock %}

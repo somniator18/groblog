@@ -1,3 +1,11 @@
 auctores_blog_homepage:
-    path:     /
-    defaults: { _controller: AuctoresBlogBundle:Default:index }
+    path:     /home/{page}
+    defaults: { _controller: AuctoresBlogBundle:Default:index,page:1 }
+
+auctores_blog_add_article:
+    path:     /add
+    defaults: { _controller: AuctoresBlogBundle:Default:addArticle }
+
+auctores_blog_article_detail:
+    path:     /article/{slug}
+    defaults: { _controller: AuctoresBlogBundle:Default:article, slug:'hello'}

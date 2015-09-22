@@ -3,14 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <title>Decade Blog{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+
+        {% stylesheets
+            'assets/vendor/Materialize/dist/css/materialize.min.css'
+            '@AuctoresBlogBundle/Resources/public/css/style.css'
+        filter='cssrewrite'
+        %}
+            <link rel="stylesheet"
+                  href="{{ asset_url }}">
+        {% endstylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         <header>
             {% include ':Base:navbar.html.twig' %}
         </header>
-        <main>
+        <main class="amber lighten-4">
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
         </main>

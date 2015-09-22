@@ -1,0 +1,14 @@
+
+{% extends "::base.html.twig" %}
+
+{% block title %} Article {% endblock %}
+{% block body %}
+    <h3 style="font-family:vivaldi;margin:0px">Article</h3>
+    <div style="margin-bottom:0px" class="row container brown lighten-1">
+        <h2 style="font-family:vivaldi;"><b>{{ article.title }}</b></h2>
+        <h6>{{ article.slug }}</h6>
+        <h5> Ecrit le {{ article.date|date('Y-m-d H:i:s') }}</h5>
+        <h5>{{ article.text }}</h5>
+    </div>
+
+{% endblock %}
